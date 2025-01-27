@@ -28,6 +28,7 @@ body {
   background-position: top;
   position: relative;
 
+  /* to crop the bg image */
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
 .logo-box {
@@ -44,12 +45,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
 
+    /* disable shaking */
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -102,4 +106,28 @@ body {
     }
 }
 
+
+.btn:link, 
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    /* color: grey; */
+    padding: 15px;
+    display: inline-block;
+    border-radius: 100px; 
+    transition: all .2s;
+    
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+}
+/* after clicking to have the influence*/
+.btn:active{
+    transform: translateY(-1px);
+}
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
 
